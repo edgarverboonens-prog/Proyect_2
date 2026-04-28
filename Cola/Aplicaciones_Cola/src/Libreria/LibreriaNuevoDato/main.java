@@ -1,4 +1,6 @@
-package Libreria.LibreriaDB;
+package Libreria.LibreriaNuevoDato;
+
+import Libreria.LibreriaNuevoDato.ColaLibreriaND_Concreta;
 
 import java.util.Scanner;
 
@@ -9,14 +11,15 @@ public class main {
 
         System.out.print("Capacidad: ");
         int cap = sc.nextInt();
+        sc.nextLine();
 
-        ColaLibreriaDB_Concreta cola = new ColaLibreriaDB_Concreta(cap);
+        ColaLibreriaND_Concreta cola = new ColaLibreriaND_Concreta(cap);
 
         int op;
 
         do {
-            System.out.println("\n1. Agregar elemento");
-            System.out.println("2. Quitar elemento");
+            System.out.println("\n1. Agregar producto");
+            System.out.println("2. Quitar producto");
             System.out.println("3. Mostrar");
             System.out.println("4. ¿Está vacía?");
             System.out.println("5. ¿Está llena?");
@@ -25,11 +28,16 @@ public class main {
             System.out.print("Opción: ");
 
             op = sc.nextInt();
+            sc.nextLine();
 
             switch (op) {
                 case 1:
-                    System.out.print("Valor: ");
-                    cola.agregar(sc.nextInt());
+                    System.out.print("Nombre: ");
+                    String nombre = sc.nextLine();
+                    System.out.print("Precio: ");
+                    double precio = sc.nextDouble();
+                    sc.nextLine();
+                    cola.agregar(new Producto(nombre, precio));
                     break;
                 case 2:
                     cola.quitar();
@@ -44,7 +52,7 @@ public class main {
                     System.out.println(cola.estaLlena() ? "Sí" : "No");
                     break;
                 case 6:
-                    System.out.println("Tamaño: " + cola.tamanio());
+                    System.out.println("Tamaño: " + cola.tamaño());
                     break;
             }
 

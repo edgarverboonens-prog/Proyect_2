@@ -1,20 +1,22 @@
-package Libreria.LibreriaDB;
+package Libreria.LibreriaNuevoDato;
 
 import java.util.ArrayList;
 
-public abstract class ColaLibreriaDB_Abstracta {
-    protected ArrayList<Integer> datos;
+public abstract class ColaLibreriaND_Abstracta {
+
+    protected ArrayList<Producto> datos;
     protected int capacidad;
 
-    public ColaLibreriaDB_Abstracta(int capacidad) {
+    public ColaLibreriaND_Abstracta(int capacidad) {
         this.capacidad = capacidad;
         datos = new ArrayList<>();
     }
 
-    public abstract void agregar(int valor);
+    public abstract void agregar(Producto p);
     public abstract void quitar();
     public abstract void mostrar();
     public abstract boolean estaVacia();
     public abstract boolean estaLlena();
-    public abstract int tamanio();
+    public abstract int tamaño();
 }
+

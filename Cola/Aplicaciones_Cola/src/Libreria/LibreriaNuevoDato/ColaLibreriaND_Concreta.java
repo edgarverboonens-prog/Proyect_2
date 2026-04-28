@@ -1,16 +1,17 @@
-package Libreria.LibreriaDB;
+package Libreria.LibreriaNuevoDato;
 
-public class ColaLibreriaDB_Concreta extends ColaLibreriaDB_Abstracta{
-    public ColaLibreriaDB_Concreta(int capacidad) {
+public class ColaLibreriaND_Concreta extends  ColaLibreriaND_Abstracta{
+
+    public ColaLibreriaND_Concreta(int capacidad){
         super(capacidad);
     }
 
     @Override
-    public void agregar(int valor) {
+    public void agregar(Producto p) {
         if (estaLlena()) {
             System.out.println("La cola está llena.");
         } else {
-            datos.add(valor); // FIFO
+            datos.add(p);
         }
     }
 
@@ -28,7 +29,9 @@ public class ColaLibreriaDB_Concreta extends ColaLibreriaDB_Abstracta{
         if (estaVacia()) {
             System.out.println("Vacía");
         } else {
-            System.out.println(datos);
+            for (Producto p : datos) {
+                System.out.println(p);
+            }
         }
     }
 
@@ -43,7 +46,9 @@ public class ColaLibreriaDB_Concreta extends ColaLibreriaDB_Abstracta{
     }
 
     @Override
-    public int tamanio() {
+    public int tamaño() {
         return datos.size();
     }
 }
+
+
