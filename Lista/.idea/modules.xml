@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Array/ARRAY-DB/ARRAY-DB.iml" filepath="$PROJECT_DIR$/Array/ARRAY-DB/ARRAY-DB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Array/ARRAY-NuevoTipoDato/ARRAY-NuevoTipoDato.iml" filepath="$PROJECT_DIR$/Array/ARRAY-NuevoTipoDato/ARRAY-NuevoTipoDato.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librerias/DB-Listas/DB-Listas.iml" filepath="$PROJECT_DIR$/Librerias/DB-Listas/DB-Listas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Nueva carpeta.iml" filepath="$PROJECT_DIR$/.idea/Nueva carpeta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Librerias/NuevoTipoDato-Listas/NuevoTipoDato-Listas.iml" filepath="$PROJECT_DIR$/Librerias/NuevoTipoDato-Listas/NuevoTipoDato-Listas.iml" />
+    </modules>
+  </component>
+</project>
