@@ -1,6 +1,6 @@
 <div align="center">
 
-![Logo del Equipo](https://i.pinimg.com/736x/0c/c2/13/0cc2139fe1a3f9a7dc052aeeec9d20e0.jpg)
+<img src="https://i.pinimg.com/736x/0c/c2/13/0cc2139fe1a3f9a7dc052aeeec9d20e0.jpg" width="200" height="200" alt="Logo del Equipo">
 
 # 📚 Estructuras de Datos y Algoritmos de Ordenamiento
 
