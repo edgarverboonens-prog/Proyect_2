@@ -2,10 +2,11 @@
 
 # 📚 Estructuras de Datos y Algoritmos de Ordenamiento
 
-*Una suite completa de estructuras de datos lineales y algoritmos, implementada al 100% en Java.*
+*Una suite completa de estructuras de datos lineales y algoritmos, implementada en un ecosistema híbrido usando Java y C++.*
 
 <!-- Badges de tecnologías -->
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white)
 
@@ -15,27 +16,37 @@
 
 ## 👨‍💻 Sobre el Proyecto
 
-Este repositorio contiene un ecosistema modularizado diseñado bajo el entorno de **IntelliJ IDEA**. El proyecto destaca por su capacidad de gestionar tanto tipos de datos primitivos como objetos complejos (TDA), demostrando la versatilidad de las estructuras en diferentes contextos de memoria.
+Este repositorio contiene un ecosistema modularizado diseñado para gestionar tanto tipos de datos primitivos como objetos complejos (TDA). 
+
+Gran parte de las estructuras implementadas siguen una arquitectura de software limpia dividida rigurosamente en **3 archivos principales**, garantizando un bajo acoplamiento:
+1. **Interfaz / Header (`.h`):** Define las firmas y el contrato de los métodos.
+2. **Clase Abstracta:** Establece el molde general y las reglas de negocio de la estructura.
+3. **Clase Concreta / Main:** Implementa la lógica exacta y la interacción directa con el usuario.
 
 ---
 
 ## 🛠️ Estructuras de Datos Implementadas
 
 ### 📦 1. Colas (Queues)
-Se encuentran en el módulo principal y se dividen en diferentes enfoques de implementación:
-* 🌱 **ArregloNuevoDato:** Utiliza el tipo de dato personalizado `Producto.java`. Implementa una arquitectura de clases (Abstracta/Concreta) para definir el comportamiento de la cola sobre arreglos.
-* ⚙️ **ArreglosDatoBasico:** Implementación clásica utilizando tipos de datos primitivos (`int`, `double`, etc.).
-* 🔗 **Punteros:** Implementación dinámica de colas utilizando nodos enlazados.
+Divididas en diferentes enfoques de implementación según la gestión de memoria y el lenguaje:
+* 🌱 **ArregloNuevoDato (Java):** Utiliza el tipo de dato personalizado `Producto.java` aplicando la arquitectura Abstracta/Concreta.
+* ⚙️ **ArreglosDatoBasico (Java):** Implementación clásica utilizando tipos de datos primitivos (`int`, `double`, etc.).
+* 🔗 **Punteros (C++):** Implementación de colas dinámicas manipulando directamente la memoria mediante aritmética de punteros y nodos.
 
-### 📚 2. Listas y Pilas
-* 📝 **Listas:** Ubicadas en la carpeta `Lista`, incluyen implementaciones de gestión dinámica de elementos.
-* 🥞 **Pilas (Stacks):** Implementaciones basadas en el principio **LIFO** (Last In, First Out) para la gestión de estados y reversión de procesos.
+### 📝 2. Listas (Lists)
+Incluyen implementaciones de gestión dinámica de elementos en memoria:
+* ☕ **Implementación en Java:** Manejo de listas apoyado en la recolección de basura nativa del lenguaje.
+* ⚙️ **Implementación en C++:** Gestión manual de la memoria utilizando punteros para enlazar los elementos y recorrer la estructura, garantizando una administración eficiente de los recursos.
+
+### 🥞 3. Pilas (Stacks)
+Implementaciones basadas en el principio **LIFO** (Last In, First Out) para la gestión de estados:
+* ⚙️ **Implementación nativa en C++:** Desarrollo enfocado en el alto rendimiento y manejo de referencias en memoria para apilar y desapilar datos de forma controlada y segura.
 
 ---
 
 ## ⚡ Algoritmos de Ordenamiento
 
-Ubicados en la carpeta `Ordenamientos`, se incluyen los tres pilares del ordenamiento algorítmico:
+Ubicados en la carpeta `Ordenamientos` (Java), se incluyen los tres pilares del ordenamiento algorítmico:
 
 1. 🫧 **Bubble Sort (Burbuja):** Método por comparación adyacente simple.
 2. 🔀 **Merge Sort:** Algoritmo eficiente de tipo "Divide y Vencerás" con complejidad matemática de $O(n \log n)$.
@@ -43,44 +54,36 @@ Ubicados en la carpeta `Ordenamientos`, se incluyen los tres pilares del ordenam
 
 ---
 
-## 🚀 Guía de Ejecución en IntelliJ IDEA
+## 🚀 Guías de Ejecución
 
-Al ser un proyecto nativo de IntelliJ (incluye los archivos `.iml`), la configuración es directa y rápida.
+### ☕ Para los módulos en Java (IntelliJ IDEA)
+Al ser un proyecto nativo de IntelliJ (incluye archivos `.iml`), la configuración es directa:
+1. **Importar en el IDE:** Abre IntelliJ, selecciona `File > Open` y elige la carpeta raíz.
+2. **Configuración de Módulos:** Asegúrate de que la carpeta `src` de cada submódulo esté marcada como **Sources Root** *(Click derecho en src > Mark Directory as > Sources Root)*.
+3. **Correr el programa:** Busca el archivo `Main.java` correspondiente al tema, haz clic derecho y selecciona **Run 'Main.java'**.
 
-### 📋 Requisitos
-* **JDK 17** o superior.
-* **IntelliJ IDEA** (Community o Ultimate).
-
-### ⚙️ Pasos de Instalación
-1. **Clonar el repositorio:**
+### ⚙️ Para los módulos en C++ (Listas, Colas y Pilas)
+Para compilar los ejercicios basados en punteros, necesitas un compilador de C++ (como `g++` / MinGW) o un IDE compatible (como Dev-C++, CLion o VS Code).
+1. Abre tu terminal o consola de comandos.
+2. Navega hasta la carpeta del proyecto en C++ que deseas ejecutar.
+3. Compila los archivos uniendo la implementación y el main:
    ```bash
-   git clone [https://github.com/edgarverboonens-prog/Proyect_2.git](https://github.com/edgarverboonens-prog/Proyect_2.git)
+   g++ main.cpp Estructura.cpp -o programa
    ```
-2. **Importar en el IDE:**
-   * Abre IntelliJ y selecciona `File > Open`.
-   * Elige la carpeta raíz `Proyect_2`.
-3. **Configuración de Módulos:**
-   * El IDE detectará automáticamente los archivos `Aplicaciones_Cola.iml` y `Proyect_2.iml`.
-   * Asegúrate de que la carpeta `src` esté marcada como **Sources Root** *(Click derecho en src > Mark Directory as > Sources Root)*.
-4. **Correr el programa:**
-   * Busca el archivo `main.java` dentro de `src/Arreglos/ArregloNuevoDato/` (o en el submódulo que desees probar).
-   * Haz clic derecho y selecciona **Run 'main.java'**.
+4. Ejecuta el archivo resultante:
+   * En Windows: `programa.exe`
+   * En Linux/Mac: `./programa`
 
 ---
 
-## 📂 Jerarquía del Proyecto
+## 📂 Jerarquía General del Proyecto
 ```text
-├── Cola/Aplicaciones_Cola/
-│   ├── src/
-│   │   ├── Arreglos/
-│   │   │   ├── ArregloNuevoDato/  <-- Lógica con Producto.java
-│   │   │   └── ArreglosDatoBasico/
-│   │   ├── Libreria/
-│   │   └── Punteros/
-│   └── Aplicaciones_Cola.iml
-├── Lista/                      # Implementaciones dinámicas de Listas
-├── Ordenamientos/              # Quick, Merge y Bubble Sort
+├── Cola/
+│   ├── Aplicaciones_Cola/ (Java)
+│   └── src/Punteros/      (C++)
+├── Lista/                 # Implementaciones dinámicas en Java y C++
+├── Pila/                  # Implementación LIFO nativa en C++
+├── Ordenamientos/         # Quick, Merge y Bubble Sort (Java)
 ├── .gitignore
-├── Proyect_2.iml               # Configuración principal
 └── README.md
 ```
