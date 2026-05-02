@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.pinimg.com/736x/0c/c2/13/0cc2139fe1a3f9a7dc052aeeec9d20e0.jpg" width="200" height="200" alt="Logo del Equipo">
+<img src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/5675635/cover_image/regular_1708x683/COVER-de364d79bd4f5604990a2c9f0438c50b.png" width="350" height="200" alt="Logo del Equipo">
 
 # 📚 Estructuras de Datos y Algoritmos de Ordenamiento
 
