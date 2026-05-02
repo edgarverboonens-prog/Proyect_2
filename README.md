@@ -1,67 +1,74 @@
-# 📚 Estructuras de Datos y Algoritmos de Ordenamiento
+# 📚 Estructuras de Datos y Algoritmos de Ordenamiento (Java)
 
-Este repositorio contiene la implementación técnica de estructuras de datos lineales y algoritmos de ordenamiento fundamentales en **C++**, diseñados para trabajar tanto con tipos de datos básicos como con estructuras personalizadas.
+Este repositorio contiene una suite completa de estructuras de datos lineales y algoritmos de ordenamiento, implementada en **Java** bajo el entorno de **IntelliJ IDEA**. El proyecto destaca por su capacidad de gestionar tanto tipos de datos primitivos como objetos complejos (TDA).
 
 ---
 
 ## 🛠️ Estructuras de Datos Implementadas
 
-Cada estructura está diseñada para ser genérica, permitiendo almacenar desde un `int` simple hasta un TDA (Tipo de Dato Abstracto) complejo.
+El proyecto está modularizado para demostrar la versatilidad de las estructuras en diferentes contextos de memoria y tipos de datos.
 
-### 1. Pilas (Stacks)
-*   **Principio:** LIFO (Last In, First Out).
-*   **Operaciones:** `push` (insertar), `pop` (eliminar), `peek` (ver tope).
-*   **Dato Nuevo:** Soporte para objetos complejos (ej. Estructura `Nodo` con múltiples atributos).
+### 1. Colas (Queues)
+Se encuentran en el módulo principal y se dividen en dos enfoques de implementación:
+*   **ArregloNuevoDato:** Utiliza el tipo de dato personalizado `Producto.java`. 
+    *   Implementa una arquitectura de clases (Abstracta/Concreta) para definir el comportamiento de la cola sobre arreglos.
+*   **ArreglosDatoBasico:** Implementación clásica utilizando tipos de datos primitivos (int, double, etc.).
+*   **Punteros:** Implementación dinámica de colas utilizando nodos enlazados.
 
-### 2. Colas (Queues)
-*   **Principio:** FIFO (First In, First Out).
-*   **Operaciones:** `enqueue` (insertar), `dequeue` (eliminar), `front` (ver frente).
-
-### 3. Listas Enlazadas (Linked Lists)
-*   **Tipo:** Dinámica.
-*   **Ventaja:** Gestión eficiente de memoria sin necesidad de definir un tamaño fijo inicial.
+### 2. Listas y Pilas
+*   **Listas:** Ubicadas en la carpeta `Lista`, incluyen implementaciones de gestión dinámica de elementos.
+*   **Pilas:** Implementaciones basadas en el principio LIFO para la gestión de estados y reversión de procesos.
 
 ---
 
 ## ⚡ Algoritmos de Ordenamiento
+Ubicados en la carpeta `Ordenamientos`, se incluyen los tres pilares del ordenamiento algorítmico:
 
-Implementación de algoritmos clásicos para la organización de datos:
-
-1.  **Bubble Sort (Burbuja):** Ideal para propósitos educativos y listas pequeñas ($O(n^2)$).
-2.  **Merge Sort (Mezcla):** Algoritmo de divide y vencerás, altamente eficiente y estable ($O(n \log n)$).
-3.  **Quick Sort (Rápido):** Algoritmo de particionamiento, generalmente el más veloz en ejecución real ($O(n \log n)$).
+1.  **Bubble Sort (Burbuja):** Método por comparación adyacente simple.
+2.  **Merge Sort:** Algoritmo eficiente de tipo "Divide y Vencerás" con complejidad $O(n \log n)$.
+3.  **Quick Sort:** Ordenamiento por partición, optimizado para alto rendimiento en grandes conjuntos de datos.
 
 ---
 
-## 🚀 Guía de Ejecución
+## 🚀 Guía de Ejecución en IntelliJ IDEA
 
-El proyecto está configurado para ser utilizado en **IntelliJ IDEA** o mediante **terminal**.
+Al ser un proyecto nativo de IntelliJ (archivos `.iml`), la configuración es directa:
 
-### Opción A: IntelliJ IDEA / CLion
-1.  **Abrir Proyecto:** Inicia IntelliJ IDEA y selecciona `File > Open`. Elige la carpeta raíz de este repositorio.
-2.  **Plugin de C++:** Asegúrate de tener instalado el plugin "C/C++" o estar usando **CLion**.
-3.  **Configuración de CMake:** El IDE detectará el archivo `CMakeLists.txt` automáticamente. Haz clic en "Load CMake Project".
-4.  **Ejecutar:** Haz clic en el botón **Run** (triángulo verde 🟢) en la parte superior derecha.
+### Requisitos
+*   **JDK 17** o superior.
+*   **IntelliJ IDEA** (Community o Ultimate).
 
-### Opción B: Consola (G++)
-Si prefieres compilar manualmente desde la terminal:
-
-1.  **Compilación:**
+### Pasos
+1.  **Clonar el repositorio:**
     ```bash
-    g++ -o programa_estructuras main.cpp
+    git clone [https://github.com/edgarverboonens-prog/Proyect_2.git](https://github.com/edgarverboonens-prog/Proyect_2.git)
     ```
-    *(Nota: Asegúrate de incluir todos los archivos .cpp adicionales si la lógica está separada).*
-
-2.  **Ejecución:**
-    *   **Windows:** `programa_estructuras.exe`
-    *   **Linux/Mac:** `./programa_estructuras`
+2.  **Importar en el IDE:**
+    *   Abre IntelliJ y selecciona `File > Open`.
+    *   Elige la carpeta raíz `Proyect_2`.
+3.  **Configuración de Módulos:**
+    *   El IDE detectará automáticamente los archivos `Aplicaciones_Cola.iml` y `Proyect_2.iml`.
+    *   Asegúrate de que la carpeta `src` esté marcada como **Sources Root** (Click derecho en src > Mark Directory as > Sources Root).
+4.  **Correr el programa:**
+    *   Busca el archivo `main.java` dentro de `src/Arreglos/ArregloNuevoDato/`.
+    *   Haz clic derecho y selecciona **Run 'main.java'**.
 
 ---
 
-## 📂 Estructura del Código
+## 📂 Jerarquía del Proyecto
 ```text
-├── .idea/              # Configuración de IntelliJ
-├── main.cpp            # Menú principal y pruebas
-├── Estructuras/        # Implementación de Pilas, Colas y Listas
-├── Ordenamientos/      # Código de Quick, Merge y Bubble Sort
-└── CMakeLists.txt      # Configuración de compilación
+├── Cola/Aplicaciones_Cola/
+│   ├── src/
+│   │   ├── Arreglos/
+│   │   │   ├── ArregloNuevoDato/  <-- Lógica con Producto.java
+│   │   │   └── ArreglosDatoBasico/
+│   │   ├── Libreria/
+│   │   └── Punteros/
+│   └── Aplicaciones_Cola.iml
+├── Lista/                      # Implementaciones de Listas
+├── Ordenamientos/              # Quick, Merge y Bubble Sort
+├── .gitignore
+├── Proyect_2.iml               # Configuración principal
+└── README.md
+
+
