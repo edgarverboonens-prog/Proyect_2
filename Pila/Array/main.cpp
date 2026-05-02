@@ -15,7 +15,7 @@ int main() {
         cout << "3. Mostrar pila" << endl;
         cout << "4. Verificar si esta vacia" << endl;
         cout << "5. Verificar si esta llena" << endl;
-        cout << "6. Mostrar tamaño" << endl;
+        cout << "6. Mostrar tamano" << endl;
         cout << "7. Salir" << endl;
         cout << "Opcion: ";
         cin >> opcion;
@@ -53,7 +53,7 @@ int main() {
             break;
 
         case 6:
-            cout << "Tamaño: " << p.obtenerTamano() << endl;
+            cout << "Tamaï¿½o: " << p.obtenerTamano() << endl;
             break;
 
         case 7:
