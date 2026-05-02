@@ -1,15 +1,11 @@
 public class OrdenadorQuick extends ADTOrdenadorNTD {
-
-
     @Override
-    public void ordenarPorEdad(Persona[] array) {
-
-        if (array == null || array.length == 0) {
+    public void ordenarPorEdad(Persona[] array, int tamActual) {
+        if (array == null || tamActual <= 1) {
             return;
         }
-        quickSortRecursivo(array, 0, array.length - 1);
+        quickSortRecursivo(array, 0, tamActual - 1);
     }
-
     private void quickSortRecursivo(Persona[] array, int inicio, int fin) {
         if (inicio < fin) {
             int indicePivote = particion(array, inicio, fin);
